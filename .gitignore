@@ -1,0 +1,106 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache and logs
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+.yarn-cache/
+
+# Build artifacts
+dist/
+coverage/
+storybook-static/
+
+# Misc
+*.log
+*.bak
+*.tmp
+*.swp
+# Yarn PnP
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# PnP (Plug'n'Play) files (if using Yarn PnP)
+.pnp.cjs
+.pnp.loader.mjs
+
+# Lock files (keep only the one you're using)
+pnpm-lock.yaml
+yarn.lock
+
+# Next.js export folder (if using `next export`)
+/out/
+
+# Tailwind CSS JIT cache (if using JIT mode)
+.tailwind-cache/
+
+# Jest & Testing
+/coverage/
+.nyc_output/
+.jest/
+
+# Logs & Debugging
+*.log
+*.pid
+*.seed
+*.csv
+*.sqlite
+*.sqlite-journal
+
+# VS Code specific settings (optional)
+.vscode/*
+.history/
+
+# Mac & Windows system files (already covered but good to reinforce)
+*.DS_Store
+*.Thumbs.db
+*.desktop.ini
+
