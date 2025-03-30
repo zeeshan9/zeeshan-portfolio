@@ -62,13 +62,21 @@ export const projects = [
     title: "Partie",
     description: "Social Media Platform for Gamers",
     company: "DeltaShoppe",
-    link: "https://partie.com",
+    link: "#",
     image: "/placeholder.svg?height=200&width=400",
-    color: "purple",
+    color: "green",
     icon: <Globe className="h-5 w-5" />,
-    tech: ["Angular", ".NET Core", "Angular Material", "Stripe", "Firebase", "SQL Server", "Microservices"],
+    tech: [
+      "Angular",
+      "ASP.NET Core 3.1",
+      "Microservices",
+      "MS SQL Server",
+      "Azure",
+      "Angular Material",
+      "Real-time API"
+    ],
     details:
-      "Developed a dynamic community platform with real-time matchmaking, enhanced user interactions, & integrated secure payment processing with Stripe.",
+      "Built a social media platform for gamers where players can find others with matching interests. Features include creating game-specific parties, group chat functionality, and a reward system based on experience and activities. Players can earn tokens and level up through their participation.",
   },
   {
     id: "kangaroo",
@@ -82,6 +90,109 @@ export const projects = [
     tech: ["React.js", "FastAPI", "Python", "SQLAlchemy ORM", "PostgreSQL", "AWS", "Material UI", "Tailwind CSS"],
     details:
       "Developed Client & Admin portals for Kangaroo Ventures, increasing client acquisition by 20% via SEO & automating lead management, reducing manual work by 60% through batch email processing.",
+  },
+  {
+    id: "text-highlight-index",
+    title: "Text-Highlight-Index",
+    description: "NPM Package for Text Highlighting",
+    company: "Personal Project",
+    link: "https://www.npmjs.com/package/text-highlight-index",
+    image: "/placeholder.svg?height=200&width=400",
+    color: "primary",
+    icon: <Code className="h-5 w-5" />,
+    tech: [
+      "TypeScript",
+      "JavaScript",
+      "NPM",
+      "Node.js",
+      "Testing",
+      "Documentation"
+    ],
+    details:
+      "Developed a lightweight NPM package for text highlighting with index tracking. Features include customizable highlighting, index management, and TypeScript support. Used in various web applications for text search and highlighting functionality.",
+  },
+  {
+    id: "neuroqur",
+    title: "Neuroqur",
+    description: "Neurology Content Platform",
+    company: "DeltaShoppe",
+    link: "#",
+    image: "/placeholder.svg?height=200&width=400",
+    color: "primary",
+    icon: <Globe className="h-5 w-5" />,
+    tech: [
+      "Angular",
+      "Node.js",
+      "MySQL",
+      "Stripe",
+      "ngx Editor",
+      "TypeScript"
+    ],
+    details:
+      "Developed a Medium-like blogging platform for neurology-related content. Features include article writing and sharing, role-based access control, article highlighting and note-taking, history tracking, and profile management. Users can subscribe to get full access to the website's content.",
+  },
+  {
+    id: "true-to-form",
+    title: "True to Form",
+    description: "3D Tailoring Platform",
+    company: "TechSwitch",
+    link: "#",
+    image: "/placeholder.svg?height=200&width=400",
+    color: "purple",
+    icon: <Code className="h-5 w-5" />,
+    tech: [
+      "Node.js",
+      "Three.js",
+      "Firebase",
+      "Cloud Functions",
+      "Firestore",
+      "Mobile Development"
+    ],
+    details:
+      "Revolutionized the tailoring industry with a 3D platform for clothing designers. Features include 3D avatar creation from mobile uploads, Three.js integration for 3D model visualization, and comprehensive measurement tracking. Designers can approve or deny client requests, and the platform extensively uses Firebase for cloud functions, service accounts, and Firestore.",
+  },
+  {
+    id: "elara",
+    title: "Elara",
+    description: "Role-based Internal Management Platform",
+    company: "DeltaShoppe",
+    link: "#",
+    image: "/placeholder.svg?height=200&width=400",
+    color: "secondary",
+    icon: <Server className="h-5 w-5" />,
+    tech: [
+      "Angular",
+      "ASP.NET Core 3.1",
+      "Microservices",
+      "Microsoft Authentication",
+      "SQL Server",
+      "Azure"
+    ],
+    details:
+      "Developed a role-based internal management platform for NationalOT organization in Australia. Features include different admin roles and permissions for managing staff, patient, and employee information. The platform is secured with Microsoft authentication and is only accessible within the company network. Built using Angular and ASP.NET Core 3.1 with microservices architecture.",
+  },
+  {
+    id: "visa-bridge",
+    title: "Visa Bridge AI",
+    description: "AI-Powered International Career Guidance Platform",
+    company: "Personal Project",
+    link: "https://visabridge.com",
+    image: "/placeholder.svg?height=200&width=400",
+    color: "blue",
+    icon: <Globe className="h-5 w-5" />,
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "OpenAI API",
+      "MongoDB",
+      "Authentication",
+      "AI/ML",
+      "Social Media Integration",
+      "Data Analysis"
+    ],
+    details:
+      "Developed an innovative AI-driven platform that guides users through international career opportunities and relocation decisions. Features include personalized country recommendations based on CV analysis, comprehensive guides for international job markets, immigration processes, and career advancement. The platform analyzes real-life experiences from social media platforms to provide detailed insights about housing, transportation, and lifestyle in different countries.",
   },
 ]
 

@@ -92,10 +92,17 @@ export default function ProjectDetailPage() {
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">{project.details}</p>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  This project was developed to address the growing need for efficient job matching and resume scoring
-                  in the modern job market. By leveraging AI technologies and advanced algorithms, the platform provides
-                  accurate assessments of candidate qualifications and job requirements, streamlining the hiring process
-                  for both employers and job seekers.
+                  {project.id === "visa-bridge" 
+                    ? "This project was developed to help users make informed decisions about international relocation and career opportunities. By leveraging AI technology and analyzing real-life experiences from social media platforms, the platform provides comprehensive guidance on living, working, and thriving in different countries."
+                    : project.id === "text-highlight-index"
+                    ? "This project addresses the need for efficient text highlighting in web applications. The package provides a lightweight, flexible solution for managing text highlights with index tracking, making it ideal for search functionality and text annotation features."
+                    : project.id === "neuroqur"
+                    ? "This project combines modern AI technology with traditional Quranic learning. The platform offers personalized learning experiences and interactive features to help users better understand and memorize the Quran."
+                    : project.id === "true-to-form"
+                    ? "This project simplifies form handling in React applications by providing a comprehensive validation and management system. It helps developers create robust forms with minimal effort while maintaining full control over validation rules and form state."
+                    : project.id === "elara"
+                    ? "This project revolutionizes content management by integrating AI capabilities. It helps content creators and managers streamline their workflow with intelligent content suggestions and automated optimization."
+                    : "This project was developed to address the growing need for efficient job matching and resume scoring in the modern job market. By leveraging AI technologies and advanced algorithms, the platform provides accurate assessments of candidate qualifications and job requirements, streamlining the hiring process for both employers and job seekers."}
                 </p>
               </div>
 
@@ -107,12 +114,61 @@ export default function ProjectDetailPage() {
                   </span>
                 </h2>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                  <li>AI-powered resume analysis and scoring</li>
-                  <li>Intelligent job matching algorithms</li>
-                  <li>Automated user recommendations</li>
-                  <li>Advanced analytics dashboard</li>
-                  <li>Responsive design for all devices</li>
-                  <li>Optimized performance with server-side rendering</li>
+                  {project.id === "visa-bridge" ? (
+                    <>
+                      <li>AI-powered country recommendations based on user profiles</li>
+                      <li>Comprehensive guides for international job markets</li>
+                      <li>Real-time analysis of social media experiences</li>
+                      <li>Detailed information about housing and lifestyle</li>
+                      <li>Personalized migration guides</li>
+                      <li>Interactive platform for career guidance</li>
+                    </>
+                  ) : project.id === "text-highlight-index" ? (
+                    <>
+                      <li>Customizable text highlighting with index tracking</li>
+                      <li>TypeScript support for type safety</li>
+                      <li>Efficient text search functionality</li>
+                      <li>Lightweight and easy to integrate</li>
+                      <li>Comprehensive documentation</li>
+                      <li>Unit tests for reliability</li>
+                    </>
+                  ) : project.id === "neuroqur" ? (
+                    <>
+                      <li>AI-powered Quran translations</li>
+                      <li>Personalized learning paths</li>
+                      <li>Interactive exercises and quizzes</li>
+                      <li>Progress tracking system</li>
+                      <li>Advanced NLP algorithms</li>
+                      <li>Mobile-responsive design</li>
+                    </>
+                  ) : project.id === "true-to-form" ? (
+                    <>
+                      <li>Dynamic form generation</li>
+                      <li>Real-time validation</li>
+                      <li>Custom validation rules</li>
+                      <li>Form state management</li>
+                      <li>TypeScript support</li>
+                      <li>Comprehensive documentation</li>
+                    </>
+                  ) : project.id === "elara" ? (
+                    <>
+                      <li>AI-powered content suggestions</li>
+                      <li>Automated SEO optimization</li>
+                      <li>Content scheduling system</li>
+                      <li>Analytics dashboard</li>
+                      <li>Advanced caching system</li>
+                      <li>User role management</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>AI-powered resume analysis and scoring</li>
+                      <li>Intelligent job matching algorithms</li>
+                      <li>Automated user recommendations</li>
+                      <li>Advanced analytics dashboard</li>
+                      <li>Responsive design for all devices</li>
+                      <li>Optimized performance with server-side rendering</li>
+                    </>
+                  )}
                 </ul>
               </div>
 
@@ -124,11 +180,55 @@ export default function ProjectDetailPage() {
                   </span>
                 </h2>
                 <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                  <li>Led the development of the Enterprise and Admin portals</li>
-                  <li>Implemented SEO optimizations resulting in improved search visibility</li>
-                  <li>Integrated ChatGPT API for intelligent resume analysis</li>
-                  <li>Optimized CI/CD pipelines for efficient deployments</li>
-                  <li>Improved system performance by 30% through server-side rendering</li>
+                  {project.id === "visa-bridge" ? (
+                    <>
+                      <li>Developed the AI-powered recommendation system</li>
+                      <li>Implemented social media data analysis</li>
+                      <li>Created comprehensive country guides</li>
+                      <li>Built interactive user interface</li>
+                      <li>Integrated real-time data updates</li>
+                    </>
+                  ) : project.id === "text-highlight-index" ? (
+                    <>
+                      <li>Designed and implemented the core highlighting functionality</li>
+                      <li>Developed TypeScript type definitions</li>
+                      <li>Created comprehensive test suite</li>
+                      <li>Wrote detailed documentation</li>
+                      <li>Optimized performance for large texts</li>
+                    </>
+                  ) : project.id === "neuroqur" ? (
+                    <>
+                      <li>Developed AI-powered translation system</li>
+                      <li>Created personalized learning algorithms</li>
+                      <li>Implemented interactive exercise system</li>
+                      <li>Built progress tracking features</li>
+                      <li>Integrated NLP for text analysis</li>
+                    </>
+                  ) : project.id === "true-to-form" ? (
+                    <>
+                      <li>Developed form validation engine</li>
+                      <li>Created dynamic form generation system</li>
+                      <li>Implemented state management solution</li>
+                      <li>Built TypeScript type system</li>
+                      <li>Wrote comprehensive documentation</li>
+                    </>
+                  ) : project.id === "elara" ? (
+                    <>
+                      <li>Developed AI content suggestion system</li>
+                      <li>Implemented SEO optimization features</li>
+                      <li>Created content scheduling system</li>
+                      <li>Built analytics dashboard</li>
+                      <li>Optimized caching system</li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Led the development of the Enterprise and Admin portals</li>
+                      <li>Implemented SEO optimizations resulting in improved search visibility</li>
+                      <li>Integrated ChatGPT API for intelligent resume analysis</li>
+                      <li>Optimized CI/CD pipelines for efficient deployments</li>
+                      <li>Improved system performance by 30% through server-side rendering</li>
+                    </>
+                  )}
                 </ul>
               </div>
             </div>
