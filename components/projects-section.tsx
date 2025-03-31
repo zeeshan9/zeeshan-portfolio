@@ -4,195 +4,105 @@ import { useEffect, useRef, useState } from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, ChevronLeft, ChevronRight, Code, Server, Database, Globe, Info } from "lucide-react"
+import { ExternalLink, ChevronLeft, ChevronRight, Code, Server, Database, Globe, Info, Briefcase, TrendingUp, Wind, Scissors, BookOpen, Calendar } from "lucide-react"
 import Link from "next/link"
 
 export const projects = [
   {
     id: "skilledscore",
     title: "SkilledScore",
-    description: "Job & Resume Scoring Platform",
+    description: "AI-Powered Job Matching Platform",
     company: "SkilledScore",
     link: "https://skilledscore.com",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "primary",
-    icon: <Code className="h-5 w-5" />,
-    tech: [
-      "React.js",
-      "Node.js",
-      "AWS S3",
-      "TypeScript",
-      "Sequelize",
-      "ESLint",
-      "AWS",
-      "OpenAI (ChatGPT API)",
-      "AI API Integration",
-    ],
-    details:
-      "Developed Enterprise & Admin portals for SkilledScore (10M+ users), optimizing SEO & CI/CD efficiency. Integrated ChatGPT API for intelligent resume analysis, automated user recommendations, & AI-powered job matching.",
+    image: "/assets/images/skilledscore.png",
+    color: "from-blue-500 to-blue-600",
+    icon: <Briefcase className="h-6 w-6" />,
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase", "ChatGPT API"],
+    details: "A modern job matching platform that leverages AI to connect job seekers with their ideal positions.",
+  },
+  {
+    id: "kangaroo-ventures",
+    title: "Kangaroo Ventures",
+    description: "Investment Portfolio Management",
+    company: "Kangaroo Ventures",
+    link: "https://kangarooventures.com",
+    image: "/assets/images/kangaroo.png",
+    color: "from-green-500 to-green-600",
+    icon: <TrendingUp className="h-6 w-6" />,
+    tech: ["React", "Node.js", "MongoDB", "Express", "Redux"],
+    details: "A comprehensive platform for managing investment portfolios and tracking market trends.",
   },
   {
     id: "freshair",
     title: "FreshAir",
-    description: "Management Portal for IoT Projects",
-    company: "Global Rescue",
-    link: "https://freshair.io",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "green",
-    icon: <Server className="h-5 w-5" />,
-    tech: [
-      "Angular",
-      "NestJS",
-      "AWS",
-      "Lambda",
-      "S3",
-      "SQL",
-      "Socket",
-      "NGRX",
-      "Microservices",
-      "Docker",
-      "Jest",
-      "GitHub Actions",
-    ],
-    details:
-      "Built a robust IoT management portal, led backend microservices, optimized workflows, & resolved critical bugs to enhance system stability.",
+    description: "Air Quality Monitoring System",
+    company: "FreshAir",
+    link: "https://freshair.com",
+    image: "/assets/images/freshair.png",
+    color: "from-purple-500 to-purple-600",
+    icon: <Wind className="h-6 w-6" />,
+    tech: ["Vue.js", "Python", "IoT", "Django", "PostgreSQL"],
+    details: "An innovative system for monitoring and improving indoor air quality in real-time.",
   },
   {
-    id: "partie",
-    title: "Partie",
-    description: "Social Media Platform for Gamers",
-    company: "DeltaShoppe",
-    link: "#",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "green",
-    icon: <Globe className="h-5 w-5" />,
-    tech: [
-      "Angular",
-      "ASP.NET Core 3.1",
-      "Microservices",
-      "MS SQL Server",
-      "Azure",
-      "Angular Material",
-      "Real-time API"
-    ],
-    details:
-      "Built a social media platform for gamers where players can find others with matching interests. Features include creating game-specific parties, group chat functionality, and a reward system based on experience and activities. Players can earn tokens and level up through their participation.",
-  },
-  {
-    id: "kangaroo",
-    title: "Kangaroo Ventures",
-    description: "Business Consultancy Platform",
-    company: "Kangaroo Ventures",
-    link: "https://kangaroo.ventures",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "secondary",
-    icon: <Database className="h-5 w-5" />,
-    tech: ["React.js", "FastAPI", "Python", "SQLAlchemy ORM", "PostgreSQL", "AWS", "Material UI", "Tailwind CSS"],
-    details:
-      "Developed Client & Admin portals for Kangaroo Ventures, increasing client acquisition by 20% via SEO & automating lead management, reducing manual work by 60% through batch email processing.",
-  },
-  {
-    id: "text-highlight-index",
-    title: "Text-Highlight-Index",
-    description: "NPM Package for Text Highlighting",
-    company: "Personal Project",
-    link: "https://www.npmjs.com/package/text-highlight-index",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "primary",
-    icon: <Code className="h-5 w-5" />,
-    tech: [
-      "TypeScript",
-      "JavaScript",
-      "NPM",
-      "Node.js",
-      "Testing",
-      "Documentation"
-    ],
-    details:
-      "Developed a lightweight NPM package for text highlighting with index tracking. Features include customizable highlighting, index management, and TypeScript support. Used in various web applications for text search and highlighting functionality.",
-  },
-  {
-    id: "neuroqur",
-    title: "Neuroqur",
-    description: "Neurology Content Platform",
-    company: "DeltaShoppe",
-    link: "#",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "primary",
-    icon: <Globe className="h-5 w-5" />,
-    tech: [
-      "Angular",
-      "Node.js",
-      "MySQL",
-      "Stripe",
-      "ngx Editor",
-      "TypeScript"
-    ],
-    details:
-      "Developed a Medium-like blogging platform for neurology-related content. Features include article writing and sharing, role-based access control, article highlighting and note-taking, history tracking, and profile management. Users can subscribe to get full access to the website's content.",
+    id: "visa-bridge",
+    title: "Visa Bridge AI",
+    description: "AI-Powered Immigration Assistant",
+    company: "Visa Bridge AI",
+    link: "https://visabridge.ai",
+    image: "/assets/images/visabridge.png",
+    color: "from-indigo-500 to-indigo-600",
+    icon: <Globe className="h-6 w-6" />,
+    tech: ["Next.js", "TypeScript", "OpenAI API", "MongoDB", "Tailwind CSS"],
+    details: "An intelligent platform that helps users navigate the complex world of international visas and immigration.",
   },
   {
     id: "true-to-form",
     title: "True to Form",
     description: "3D Tailoring Platform",
-    company: "TechSwitch",
-    link: "#",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "purple",
-    icon: <Code className="h-5 w-5" />,
-    tech: [
-      "Node.js",
-      "Three.js",
-      "Firebase",
-      "Cloud Functions",
-      "Firestore",
-      "Mobile Development"
-    ],
-    details:
-      "Revolutionized the tailoring industry with a 3D platform for clothing designers. Features include 3D avatar creation from mobile uploads, Three.js integration for 3D model visualization, and comprehensive measurement tracking. Designers can approve or deny client requests, and the platform extensively uses Firebase for cloud functions, service accounts, and Firestore.",
+    company: "True to Form",
+    link: "https://www.truetoform.fit/",
+    image: "/assets/images/truetoform.png",
+    color: "from-pink-500 to-pink-600",
+    icon: <Scissors className="h-6 w-6" />,
+    tech: ["React", "Three.js", "Firebase", "TypeScript", "Tailwind CSS"],
+    details: "A revolutionary 3D platform for clothing designers to create and manage custom-fit garments.",
   },
   {
-    id: "elara",
-    title: "Elara",
-    description: "Role-based Internal Management Platform",
-    company: "DeltaShoppe",
-    link: "#",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "secondary",
-    icon: <Server className="h-5 w-5" />,
-    tech: [
-      "Angular",
-      "ASP.NET Core 3.1",
-      "Microservices",
-      "Microsoft Authentication",
-      "SQL Server",
-      "Azure"
-    ],
-    details:
-      "Developed a role-based internal management platform for NationalOT organization in Australia. Features include different admin roles and permissions for managing staff, patient, and employee information. The platform is secured with Microsoft authentication and is only accessible within the company network. Built using Angular and ASP.NET Core 3.1 with microservices architecture.",
+    id: "neuroqur",
+    title: "Neuroqur",
+    description: "AI-Powered Quran Learning",
+    company: "Neuroqur",
+    link: "https://neuroqur.com",
+    image: "/assets/images/neuroqur.png",
+    color: "from-yellow-500 to-yellow-600",
+    icon: <BookOpen className="h-6 w-6" />,
+    tech: ["Next.js", "TypeScript", "OpenAI API", "MongoDB", "Tailwind CSS"],
+    details: "An innovative platform that combines AI technology with traditional Quranic learning methods.",
   },
   {
-    id: "visa-bridge",
-    title: "Visa Bridge AI",
-    description: "AI-Powered International Career Guidance Platform",
-    company: "Personal Project",
-    link: "https://visabridge.com",
-    image: "/placeholder.svg?height=200&width=400",
-    color: "blue",
-    icon: <Globe className="h-5 w-5" />,
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "OpenAI API",
-      "MongoDB",
-      "Authentication",
-      "AI/ML",
-      "Social Media Integration",
-      "Data Analysis"
-    ],
-    details:
-      "Developed an innovative AI-driven platform that guides users through international career opportunities and relocation decisions. Features include personalized country recommendations based on CV analysis, comprehensive guides for international job markets, immigration processes, and career advancement. The platform analyzes real-life experiences from social media platforms to provide detailed insights about housing, transportation, and lifestyle in different countries.",
+    id: "partie",
+    title: "Partie",
+    description: "Social Event Planning Platform",
+    company: "Partie",
+    link: "https://partie.com",
+    image: "/assets/images/partie.png",
+    color: "from-orange-500 to-orange-600",
+    icon: <Calendar className="h-6 w-6" />,
+    tech: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
+    details: "A social platform for planning and organizing events with friends and family.",
+  },
+  {
+    id: "text-highlight-index",
+    title: "Text-Highlight-Index",
+    description: "NPM Package for Text Highlighting",
+    company: "Open Source",
+    link: "https://www.npmjs.com/package/text-highlight-index",
+    image: "/assets/images/text-highlight.png",
+    color: "from-red-500 to-red-600",
+    icon: <Code className="h-6 w-6" />,
+    tech: ["TypeScript", "JavaScript", "NPM", "Jest", "Documentation"],
+    details: "A lightweight and flexible NPM package for managing text highlights with index tracking.",
   },
 ]
 
@@ -289,9 +199,10 @@ export default function ProjectsSection() {
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/placeholder.svg?height=200&width=400"}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
                   <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2">
                     <Badge
@@ -371,9 +282,10 @@ export default function ProjectsSection() {
                     <div className="relative h-48 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10"></div>
                       <img
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || "/placeholder.svg?height=200&width=400"}
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                       <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2">
                         <Badge
