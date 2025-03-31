@@ -85,7 +85,7 @@ export default function ProjectDetailPage() {
       case "text-highlight-index":
         return "This project addresses the need for efficient text highlighting in web applications. The package provides a lightweight, flexible solution for managing text highlights with index tracking, making it ideal for search functionality and text annotation features."
       case "neuroqur":
-        return "This project combines modern AI technology with traditional Quranic learning. The platform offers personalized learning experiences and interactive features to help users better understand and memorize the Quran."
+        return "A Medium-like blogging platform specifically designed for neurology-related content. The platform enables content creators to write and share articles while implementing a subscription-based access model. Users can interact with content through highlighting, note-taking, and comprehensive history tracking features."
       case "partie":
         return "This project is a social event planning platform that helps users organize and manage events with friends and family. The platform features real-time collaboration, event scheduling, and interactive planning tools."
       case "true-to-form":
@@ -117,12 +117,12 @@ export default function ProjectDetailPage() {
         ]
       case "neuroqur":
         return [
-          "AI-powered Quran translations",
-          "Personalized learning paths",
-          "Interactive exercises and quizzes",
-          "Progress tracking system",
-          "Advanced NLP algorithms",
-          "Mobile-responsive design"
+          "Role-based access control system",
+          "Article writing and publishing",
+          "Content subscription management",
+          "Article highlighting and notes",
+          "User history tracking",
+          "Profile management system"
         ]
       case "partie":
         return [
@@ -174,11 +174,11 @@ export default function ProjectDetailPage() {
         ]
       case "neuroqur":
         return [
-          "Developed AI-powered translation system",
-          "Created personalized learning algorithms",
-          "Implemented interactive exercise system",
-          "Built progress tracking features",
-          "Integrated NLP for text analysis"
+          "Implemented role-based access control",
+          "Developed article management system",
+          "Integrated Stripe subscription",
+          "Built highlighting and notes feature",
+          "Created user profile and history system"
         ]
       case "partie":
         return [

@@ -71,14 +71,14 @@ export const projects = [
   {
     id: "neuroqur",
     title: "Neuroqur",
-    description: "AI-Powered Quran Learning",
+    description: "Neurology Content Platform",
     company: "Neuroqur",
     link: "https://neuroqur.com",
     image: "/assets/images/neuroqur.png",
     color: "from-yellow-500 to-yellow-600",
     icon: <BookOpen className="h-6 w-6" />,
-    tech: ["Next.js", "TypeScript", "OpenAI API", "MongoDB", "Tailwind CSS"],
-    details: "An innovative platform that combines AI technology with traditional Quranic learning methods.",
+    tech: ["Angular", "Node.js", "MySQL", "Stripe", "ngx Editor", "TypeScript"],
+    details: "A Medium-like blogging platform for neurology-related content. Features include article writing and sharing, role-based access control, article highlighting and note-taking, history tracking, and profile management. Users can subscribe to get full access to the website's content.",
   },
   {
     id: "partie",
