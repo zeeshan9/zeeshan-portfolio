@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useMemo } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { projects } from "@/components/projects-section"
 import { Button } from "@/components/ui/button"
@@ -33,10 +33,11 @@ export default function ProjectDetailPage() {
     if (!mounted) return []
     if (!project) return Array(4).fill("/placeholder.svg?height=400&width=800")
     return [
-      project.image || "/placeholder.svg?height=400&width=800",
-      "/placeholder.svg?height=400&width=800",
-      "/placeholder.svg?height=400&width=800",
-      "/placeholder.svg?height=400&width=800",
+      `/assets/images/projects/${params.slug}-1.png`,
+      `/assets/images/projects/${params.slug}-2.png`,
+      `/assets/images/projects/${params.slug}-3.png`,
+      // `/assets/images/projects/${params.slug}-4.png`,
+      // project.image || "/placeholder.svg?height=400&width=800",
     ]
   }, [project, mounted])
 
@@ -80,8 +81,14 @@ export default function ProjectDetailPage() {
 
   const getProjectOverview = () => {
     switch (project.id) {
-      case "visa-bridge":
+      case "skilledscore":
+        return "SkilledScore is an AI-powered job matching platform that enhances the hiring process by analyzing resumes and job descriptions using advanced AI algorithms. It provides accurate job recommendations and helps recruiters find the best candidates efficiently."  
+      case "kangaroo-ventures":
+        return "Kangaroo Ventures is dedicated to transforming businesses with a comprehensive suite of services, including virtual office spaces, business consultancy, and solutions that simplify operational complexities. Whether you're a startup or an established company, Kangaroo Ventures offers innovative approaches to help you grow and succeed in a competitive market.";    
+      case "visa-bridge":          
         return "This project was developed to help users make informed decisions about international relocation and career opportunities. By leveraging AI technology and analyzing real-life experiences from social media platforms, the platform provides comprehensive guidance on living, working, and thriving in different countries."
+      case "freshair-sensor":
+        return "FreshAir is an innovative air quality monitoring system designed to provide real-time data on indoor air quality. By using IoT technology, it continuously tracks and improves air quality, ensuring healthier environments for homes and workplaces.";
       case "text-highlight-index":
         return "This project addresses the need for efficient text highlighting in web applications. The package provides a lightweight, flexible solution for managing text highlights with index tracking, making it ideal for search functionality and text annotation features."
       case "neuroqur":
@@ -90,13 +97,35 @@ export default function ProjectDetailPage() {
         return "This project is a social event planning platform that helps users organize and manage events with friends and family. The platform features real-time collaboration, event scheduling, and interactive planning tools."
       case "true-to-form":
         return "This project revolutionizes the tailoring industry with a 3D platform for clothing designers. Features include 3D avatar creation from mobile uploads, Three.js integration for 3D model visualization, and comprehensive measurement tracking. Designers can approve or deny client requests, and the platform extensively uses Firebase for cloud functions, service accounts, and Firestore."
-      default:
+      case "gufhtugu":
+        return "Gufhtugu Publications is Pakistan’s leading online bookstore, offering a wide range of Urdu and technology books. The platform provides seamless online purchasing, book recommendations, and efficient order management."    
+        default:
         return "This project was developed to address the growing need for efficient job matching and resume scoring in the modern job market. By leveraging AI technologies and advanced algorithms, the platform provides accurate assessments of candidate qualifications and job requirements, streamlining the hiring process for both employers and job seekers."
     }
   }
 
   const getKeyFeatures = () => {
     switch (project.id) {
+      case "skilledscore":
+        return [
+          "AI-driven resume and job matching",
+          "ChatGPT-powered resume analysis",
+          "Automated job recommendations",
+          "Advanced search filters for job seekers and recruiters",
+          "Secure user authentication with Firebase",
+          "Responsive UI for mobile and desktop",
+          "SEO-optimized pages for better visibility"
+        ]
+      case "kangaroo-ventures":
+        return [
+          "Virtual office space solutions",
+          "Comprehensive business consultancy",
+          "Cost-effective operational services",
+          "Simplified solutions for business growth",
+          "Tailored strategies for entrepreneurs and companies",
+          "Client-centric approach for measurable success",
+          "High client satisfaction rate (98%)"
+        ]
       case "visa-bridge":
         return [
           "AI-powered country recommendations based on user profiles",
@@ -106,6 +135,16 @@ export default function ProjectDetailPage() {
           "Personalized migration guides",
           "Interactive platform for career guidance"
         ]
+      case "freshair-sensor":
+          return [
+            "Real-time indoor air quality monitoring",
+            "IoT-based sensor integration",
+            "NestJs backend with Maria DB database",
+            "Angular frontend for seamless user interface",
+            "Customizable alerts for air quality thresholds",
+            "Mobile and desktop-friendly interface",
+            "Analytics dashboard for air quality data visualization"
+          ];
       case "text-highlight-index":
         return [
           "Customizable text highlighting with index tracking",
@@ -142,6 +181,15 @@ export default function ProjectDetailPage() {
           "Firebase cloud functions integration",
           "Mobile-first responsive design"
         ]
+      case "gufhtugu":
+        return [
+          "Extensive collection of Urdu and technology books",
+          "Secure online payment and order processing using Stripe",
+          "Personalized book recommendations",
+          "Seamless browsing and search functionality",
+          "Mobile-friendly responsive design",
+          "Efficient order tracking and management"
+        ]
       default:
         return [
           "AI-powered resume analysis and scoring",
@@ -156,6 +204,24 @@ export default function ProjectDetailPage() {
 
   const getContributions = () => {
     switch (project.id) {
+      case "skilledscore":
+        return [
+          "Implemented AI-powered resume analysis using ChatGPT API",
+          "Optimized frontend performance using Next.js and server-side rendering",
+          "Enhanced SEO, improving job listing visibility by 40%",
+          "Developed job recommendation algorithms for better user experience",
+          "Integrated Firebase authentication for secure user login",
+          "Refactored and optimized API calls for faster response times"
+        ]
+      case "kangaroo-ventures":
+        return [
+          "Developed virtual office space solutions for businesses",
+          "Provided comprehensive business consultancy for entrepreneurs",
+          "Streamlined operational services to enhance business efficiency",
+          "Created tailored growth strategies for both startups and established companies",
+          "Focused on a client-centric approach to ensure measurable success",
+          "Achieved a 98% client satisfaction rate through dedicated service and results"
+        ];
       case "visa-bridge":
         return [
           "Developed the AI-powered recommendation system",
@@ -164,6 +230,15 @@ export default function ProjectDetailPage() {
           "Built interactive user interface",
           "Integrated real-time data updates"
         ]
+      case "freshair-sensor":
+        return [
+          "Developed real-time air quality monitoring system using IoT sensors",
+          "Built the backend using Django and PostgreSQL for efficient data management",
+          "Implemented Angular frontend for interactive and responsive user interface",
+          "Created customizable alerts and notifications for air quality changes",
+          "Designed an analytics dashboard for air quality data visualization",
+          "Integrated mobile and desktop support for full accessibility"
+        ];
       case "text-highlight-index":
         return [
           "Designed and implemented the core highlighting functionality",
@@ -195,6 +270,14 @@ export default function ProjectDetailPage() {
           "Implemented designer approval workflow",
           "Built Firebase integration",
           "Optimized mobile performance"
+        ]
+      case "gufhtugu":
+        return [
+          "Developed the frontend using Next.js and Tailwind CSS",
+          "Implemented secure online payment integration using Stripe",
+          "Optimized book search and recommendation algorithms",
+          "Built an efficient order tracking system",
+          "Enhanced website performance and SEO for better visibility"
         ]
       default:
         return [
