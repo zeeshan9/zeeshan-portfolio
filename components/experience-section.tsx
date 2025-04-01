@@ -13,7 +13,7 @@ export const experiences = [
     title: "Senior Full Stack Engineer",
     company: "Global Rescue",
     period: "Nov 2021 – Present",
-    location: "Boston, MA (Remote)",
+    location: "Islamabad, Pakistan (Hybrid)",
     website: "https://www.globalrescue.com",
     achievements: [
       "Engineered cross-platform responsive applications, improving compatibility & performance.",
@@ -26,14 +26,14 @@ export const experiences = [
       "Collaborate with cross-functional teams to deliver high-quality software solutions",
       "Mentor junior developers and conduct code reviews to maintain code quality",
     ],
-    technologies: ["React", "Node.js", "AWS", "TypeScript", "MongoDB", "Docker", "CI/CD", "Microservices"],
+    technologies: ["Angular", "React", "Node.js", "Maria DB", "Express", "RESTful APIs", "Microservices", "Agile"],
   },
   {
     id: "skilledscore",
     title: "Senior Software Engineer",
     company: "SkilledScore & Visa Bridge",
     period: "Sep 2024 – Feb 2025",
-    location: "San Francisco, CA (Remote)",
+    location: "Part Time (Remote)",
     website: "https://www.skilledscore.com",
     achievements: [
       "Built features & fixed bugs in SkilledScore(10M+ users) using React, Next, Node & AWS boosting performance 30% via SSR.",
@@ -53,7 +53,7 @@ export const experiences = [
     title: "Associate Full-Stack Developer",
     company: "DeltaShoppe",
     period: "Jan 2020 – Nov 2021",
-    location: "New York, NY (Hybrid)",
+    location: "Phase 1V Islamabad, Pakistan (On-site)",
     website: "https://www.deltashoppe.com",
     achievements: [
       "Collaborated on front-end & back-end development using Angular, React, & Node.js in a Microservices architecture.",
@@ -73,7 +73,7 @@ export const experiences = [
     title: "Junior Software Developer",
     company: "TechSwitch",
     period: "Aug 2018 – Dec 2019",
-    location: "Islamabad, Pakistan",
+    location: "Islamabad, Pakistan (On-site)",
     website: "https://www.techswitch.com",
     achievements: [
       "Launched software development career with a focus on refining React expertise.",
