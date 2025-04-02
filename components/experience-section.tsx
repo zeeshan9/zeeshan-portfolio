@@ -13,7 +13,8 @@ export const experiences = [
     title: "Senior Full Stack Engineer",
     company: "Global Rescue",
     period: "Nov 2021 – Present",
-    location: "Islamabad, Pakistan (Hybrid)",
+    location: "Islamabad, Pakistan",
+    workType: "Full-Time, Hybrid",
     website: "https://www.globalrescue.com",
     achievements: [
       "Engineered cross-platform responsive applications, improving compatibility & performance.",
@@ -33,7 +34,8 @@ export const experiences = [
     title: "Senior Software Engineer",
     company: "SkilledScore & Visa Bridge",
     period: "Sep 2024 – Feb 2025",
-    location: "Part Time (Remote)",
+    location: "Harlem Road, Buffalo NY",
+    workType: "Contract (Part-Time, Remote)",
     website: "https://www.skilledscore.com",
     achievements: [
       "Built features & fixed bugs in SkilledScore(10M+ users) using React, Next, Node & AWS boosting performance 30% via SSR.",
@@ -41,6 +43,7 @@ export const experiences = [
       "Led Agile/Scrum deployments with Git, AWS, & Slack alerts for production issues, ensuring 99% uptime & smooth releases.",
     ],
     responsibilities: [
+      "I worked here remotely as a contract-based part-time developer.",
       "Develop and maintain core features for the SkilledScore platform serving 10M+ users",
       "Implement SEO optimizations and performance enhancements",
       "Lead deployment processes and ensure system stability",
@@ -53,7 +56,8 @@ export const experiences = [
     title: "Associate Full-Stack Developer",
     company: "DeltaShoppe",
     period: "Jan 2020 – Nov 2021",
-    location: "Phase 1V Islamabad, Pakistan (On-site)",
+    location: "Phase 1V Islamabad, Pakistan",
+    workType: "Full-Time, On-Site",
     website: "https://www.deltashoppe.com",
     achievements: [
       "Collaborated on front-end & back-end development using Angular, React, & Node.js in a Microservices architecture.",
@@ -66,15 +70,16 @@ export const experiences = [
       "Collaborate with UX/UI designers to implement responsive designs",
       "Participate in Agile ceremonies and contribute to sprint planning",
     ],
-    technologies: ["Angular", "React", "Node.js", "MongoDB", "Express", "RESTful APIs", "Microservices", "Agile"],
+    technologies: ["Angular", "React", "ASP.NET Core", "MS SQL Server", "Express", "RESTful APIs", "Microservices", "Agile"],
   },
   {
     id: "techswitch",
     title: "Junior Software Developer",
-    company: "TechSwitch",
+    company: "devstarx - Formerly TechSwitch",
     period: "Aug 2018 – Dec 2019",
-    location: "Islamabad, Pakistan (On-site)",
-    website: "https://www.techswitch.com",
+    location: "Islamabad, Pakistan",
+    workType: "Full-Time, On-Site",
+    website: "https://devstarx.com/",
     achievements: [
       "Launched software development career with a focus on refining React expertise.",
       "Contributed to multiple successful projects while adopting best practices in coding & development.",

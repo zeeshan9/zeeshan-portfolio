@@ -17,10 +17,10 @@ export default function ExperienceDetailPage() {
 
   // Sample company images (placeholders)
   const companyImages = [
-    "/placeholder.svg?height=400&width=800",
-    "/placeholder.svg?height=400&width=800",
-    "/placeholder.svg?height=400&width=800",
-    "/placeholder.svg?height=400&width=800",
+    `/assets/images/experience/${params.slug}-1.png`,
+    `/assets/images/experience/${params.slug}-2.png`,
+    `/assets/images/experience/${params.slug}-3.png`,
+    // "/placeholder.svg?height=400&width=800",
   ]
 
   useEffect(() => {
@@ -167,6 +167,11 @@ export default function ExperienceDetailPage() {
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
                   <p className="font-medium">{experience.location}</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-muted-foreground">Work Type</p>
+                  <p className="font-medium">{experience.workType}</p>
                 </div>
 
                 <div>
